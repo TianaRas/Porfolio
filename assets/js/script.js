@@ -118,9 +118,23 @@ const projects = {
       "Gestion des requêtes API et de CORS",
       "Connexion à une base de données",
       "Soutien à une application de services agricoles",
-      "https://github.com/TianaRas/Tantsaha-connect-simulation-petit-projet-.git",
     ],
     tags: ["Node.js", "Express", "API REST", "CORS"],
+    link: "https://github.com/TianaRas/Tantsaha-connect-simulation-petit-projet-",
+  },
+  pharmagest: {
+    title: "PharmaGest — Gestion de pharmacie",
+    desc: "Application web de gestion d'une pharmacie, de l'approvisionnement en médicaments jusqu'à leur vente, avec traçabilité des mouvements de stock.",
+    list: [
+      "Catalogue de médicaments avec catégories et photos",
+      "Ventes à la caisse avec reçu PDF et gestion des retours",
+      "Commandes fournisseurs, réceptions et suivi des lots",
+      "Alertes de stock faible et de péremption (30 jours)",
+      "Rôles et permissions : administrateur, pharmacien, caissier, gestionnaire de stock",
+      "Rapports PDF et journal d'audit",
+    ],
+    tags: ["Python", "Django", "SQLite", "Bootstrap", "ReportLab"],
+    link: "https://github.com/TianaRas/PharmaGest",
   },
   vtc: {
     title: "CHAUFFLEET — Plateforme VTC",
@@ -148,6 +162,15 @@ document.querySelectorAll(".card").forEach((card) => {
     document.getElementById("mTags").innerHTML = p.tags
       .map((t) => `<span>${t}</span>`)
       .join("");
+
+    // Lien GitHub (affiché seulement si le projet en a un)
+    const mLink = document.getElementById("mLink");
+    if (p.link) {
+      mLink.href = p.link;
+      mLink.hidden = false;
+    } else {
+      mLink.hidden = true;
+    }
 
     // Accessibilité : on rend la modale visible aux lecteurs d'écran
     modal.setAttribute("aria-hidden", "false");

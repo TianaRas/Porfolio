@@ -965,3 +965,44 @@ h2.left {
     right: 0;
   }
 }
+
+/* ===== Projet PharmaGest ===== */
+.projects-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.img-pharma {
+  background: linear-gradient(135deg, #0b3b3a, #14b8a6);
+}
+.mock-pharma {
+  position: relative;
+  width: 84px;
+  height: 84px;
+}
+.mock-pharma i {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+}
+.mock-pharma i:nth-child(1) {
+  left: 32px;
+  top: 0;
+  width: 20px;
+  height: 84px;
+}
+.mock-pharma i:nth-child(2) {
+  left: 0;
+  top: 32px;
+  width: 84px;
+  height: 20px;
+}
+.modal-link {
+  margin-top: 18px;
+}
+.modal-link[hidden] {
+  display: none;
+}
+@media (max-width: 620px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
